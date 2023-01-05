@@ -1,11 +1,14 @@
 import * as React from 'react';
 import './style.css';
+import { Route, Router, Switch } from 'wouter';
+import CartPage from './Pages/CartPage';
 
 export default function App() {
   return (
-    <div>
-      <h1>Hello StackBlitz!</h1>
-      <p>Start editing to see some magic happen :)</p>
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/cart" component={CartPage} />
+      </Switch>
+    </Router>
   );
 }
